@@ -19,7 +19,8 @@
 }
 .calcHeader .calcScreen {
   background-color: rgb(0, 0, 0);
-  flex-grow: 1.5;
+  color: white;
+  width: 70%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -34,7 +35,7 @@
 }
 .calcHeader .calcAnswer {
   background-color: #353535;
-  flex-grow: 1;
+  width: 30%;
   height: 100%;
   border: 2px inset rgb(203, 203, 203);
   border-left: 3px inset white;
