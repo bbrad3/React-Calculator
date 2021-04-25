@@ -10,13 +10,13 @@ The main focus of this project is to practice:
 
 ## TODO
 - [x] Build calculator layout in CSS
-- [] When clicked, buttons can talk to screen input
-    - [] Answer displays when enter is clicked
-- [] Create component nesting as necessary
-- [] Create logic for simple calculations
-- [] Create logic for complex calculations
-- [] Modal text moves R-L through modal
+- [x] When clicked, buttons can talk to screen input
+    - [x] Answer displays when enter is clicked
+- [x] Create component nesting as necessary
+- [x] Create logic for simple calculations
+- [x] Create logic for complex calculations
 
 ## Stretch
-- Answers show up when a computation is possible (without clicking enter)
-- keyboard events control calculator
+- [] Modal text moves R-L through modal
+- [] Answers show up when a computation is possible (without clicking enter)
+- [] keyboard events control calculator
