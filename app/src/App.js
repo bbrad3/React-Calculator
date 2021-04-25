@@ -23,49 +23,20 @@ const btnValues = [
   {id: 16, char: 'enter'}
 ]
 
-// Brackets => pOwers => DivMult => AddSub
-const computeAnswer = (str) => { // NO WORKY!!!!!!
-  console.log('str', str);
-  let split1 = str.split('+')
-  console.log('split1', split1);
-
-  let split2 = []
-  split1.forEach(el => split2.push(el.split('-')))
-  console.log('split2', split2);
-
-  let split3 = []
-  split2.forEach(el => {
-    el.forEach(elem => split3.push(elem.split('*')))
-  })
-  console.log('split3', split3);
-
-  let split4 = []
-  split3.forEach(el => {
-    el.forEach(elem => split4.push(elem.split('/')))
-  })
-  console.log('split4', split4);
-
-  let multiply = 0
-  let divide = 0
-  let add = 0
-  let subtract = 0
-  // split4.forEach(arr => {
-  //   arr.forEach
-  // })
-
-  multiply = split4[1][0] * split4[2][0]
-  divide = split4[3][0] / split4[3][1]
-  add = split4[0][0] + multiply
-  subtract = multiply - divide
-  let answer = subtract
-
-  console.log('answer', answer);
-  // setAnswer(answer)
-}
-
 function App() {
   const [input, setInput] = useState('')
   const [answer, setAnswer] = useState('')
+  
+  const computeAnswer = (str) => {
+    let regex = /\W/
+    if(regex.test(str)) {
+      // eslint-disable-next-line
+      let answer = eval(str)
+      setAnswer(answer.toFixed(3))
+    } else {
+      console.log('harmful string');
+    }
+  }
 
   return (
     <div className="App">
@@ -77,8 +48,7 @@ function App() {
         </div>
 
         <div className="calcModal">
-          Wrong Answer
-          {/* probably don't need a component */}
+          Check out this fancy React calculator!
         </div>
 
         <div className="calcBtns">
@@ -90,6 +60,7 @@ function App() {
                 char = {character.char}
                 input = {input}
                 setInput = {setInput}
+                setAnswer = {setAnswer}
                 computeAnswer = {computeAnswer}
               />
             )

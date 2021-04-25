@@ -4,6 +4,7 @@ function Btn(props) {
             props.setInput(props.input + props.char)
         } else if (id === 15) { // clr btn
             props.setInput('')
+            props.setAnswer('')
         } else if (id === 16) { // enter btn
             props.computeAnswer(props.input)
         }
